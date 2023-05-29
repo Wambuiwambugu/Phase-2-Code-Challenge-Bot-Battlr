@@ -2,12 +2,12 @@ import React from "react";
 import BotCard from "./BotCard";
 // import { useEffect } from "react";
 
-function BotCollection({botData, chooseBots}) {
+function BotCollection({botData, chooseBots,deleteBot}) {
   
    
   // Your code here
   const botCard = botData.map((bot) => {
-    return <BotCard  bot={bot} key={bot.id} botPick={chooseBots} />
+    return <BotCard  bot={bot} key={bot.id} botPick={chooseBots} botDelete={deleteBot} />
   });
   
   return (

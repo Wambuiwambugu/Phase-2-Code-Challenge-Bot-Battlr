@@ -1,10 +1,10 @@
 import React from "react";
 import BotCard from "./BotCard";
 
-function YourBotArmy({armyBotData}) {
+function YourBotArmy({armyBotData,removedBots,deleteBot}) {
 const botCard = armyBotData.map((armybot) => {
-  return <BotCard key={armybot.id} bot={armybot} />
-})
+  return <BotCard key={armybot.id} bot={armybot} botPick={removedBots} botDelete={deleteBot} />
+});
 
   return (
     <div className="ui segment inverted olive bot-army">
