@@ -31,6 +31,7 @@ function BotsPage() {
     if (!armybots.includes(botToDisplay)){
       setArmyBots([...armybots,botToDisplay]);
     }
+    specsUnmount()
   }
 
   function handleRemove(removedBot){
